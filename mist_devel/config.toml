@@ -1,0 +1,41 @@
+[python]
+pyversion='python3.10'
+[git_paths]
+opentims='git+ssh://git@github.com/michalsta/opentims'
+savetimspy='git+ssh://git@github.com/midiaIDorg/savetimspy'
+paramidiac='git+ssh://git@github.com/midiaIDorg/paramidiac'
+dia_common='git+ssh://git@github.com/midiaIDorg/dia_common'
+ClusterMS='git+ssh://git@github.com/midiaIDorg/ClusterMS'
+kilograms='git+ssh://git@github.com/midiaIDorg/kilograms'
+midia_search_engines='git+ssh://git@github.com/midiaIDorg/midia_search_engines'
+MSclusterparser='git+ssh://git@github.com/midiaIDorg/MSclusterparser'
+pandas_ops='git+ssh://git@github.com/midiaIDorg/pandas_ops'
+# py4DFF='http://192.168.1.151:3000/matteo/py4DFF.git'
+py4DFF='git+ssh://devel@139.177.177.253:/home/devel/gits/py4DFF'
+midia_pipe='git+ssh://git@github.com/midiaIDorg/midia_pipe'
+[git_versions]
+midia_pipe='recalibration2'
+dia_common='recalib_fixes2'
+MSclusterparser='main'
+paramidiac='main'
+savetimspy='main'
+py4DFF='master'
+pandas_ops='main'
+kilograms='main'
+ClusterMS='main'
+opentims='master'
+midia_search_engines='main'
+[requirements_external]
+opentims_bruker_bridge=""
+snakemake=""
+virtualenvwrapper=""
+gdown=""
+openpyxl=""
+ipython=""
+matplotlib=""
+plotnine=""
+seaborn=""
+[run]
+default='snakemake -call diagnostics/recalibration/G8027_cG8605_defaultconf.zip'
+hela='snakemake -call diagnostics/recalibration/G8602_cG8605_defaultconf.zip'
+short='snakemake -call diagnostics/recalibration/G0004_cG8605_defaultconf.zip'
