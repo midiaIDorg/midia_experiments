@@ -1,0 +1,57 @@
+[python]
+pyversion = "python3.10"
+
+[git_paths]
+opentims = "git+ssh://git@github.com/michalsta/opentims"
+savetimspy = "git+ssh://git@github.com/midiaIDorg/savetimspy"
+paramidiac = "git+ssh://git@github.com/midiaIDorg/paramidiac"
+dia_common = "git+ssh://git@github.com/midiaIDorg/dia_common"
+ClusterMS = "git+ssh://git@github.com/midiaIDorg/ClusterMS"
+kilograms = "git+ssh://git@github.com/midiaIDorg/kilograms"
+midia_search_engines = "git+ssh://git@github.com/midiaIDorg/midia_search_engines"
+MSclusterparser = "git+ssh://git@github.com/midiaIDorg/MSclusterparser"
+pandas_ops = "git+ssh://git@github.com/midiaIDorg/pandas_ops"
+py4DFF = "git+ssh://devel@139.177.177.253:/home/devel/gits/py4DFF"
+midia_pipe = "git+ssh://git@github.com/midiaIDorg/midia_pipe"
+
+[git_versions]
+midia_pipe = "b4408a9eb44309628347a925e729c7f3dd364942"
+dia_common = "2edb1d746c086cd78f2fa356fbda4a228e13df1d"
+MSclusterparser = "9ff01805398ba3e1290a9bebe30e3c9de5b93dfc"
+paramidiac = "46d914b5acc3e073a64c0f9126208d5200bfaa5e"
+savetimspy = "d0b521e1bc034f4ecf0b2e05eeb7786d8a55aef1"
+py4DFF = "ef09601a1ad5cbc48dcceb80327996e7531a7cad"
+pandas_ops = "6543e8dc47848169f3f23c2aec26ad155478506c"
+kilograms = "b6717c1e2476974257f1afafb899a351954b0543"
+ClusterMS = "8ebcbde1a58bcf60319376c4e1000ed84d7aeda0"
+opentims = "48d06301f6ecb6b4e3cba88f990386e96b2e640c"
+midia_search_engines = "06a0e658ec10c5cc86c4c1434da2dd82e2813a61"
+
+[requirements_external]
+opentims_bruker_bridge = ""
+snakemake = ""
+virtualenvwrapper = ""
+gdown = ""
+openpyxl = ""
+ipython = ""
+matplotlib = ""
+plotnine = ""
+seaborn = ""
+
+[run]
+default = "snakemake -call diagnostics/recalibration/G8027_cG8605_defaultconf.zip"
+hela = "snakemake -call diagnostics/recalibration/G8602_cG8605_defaultconf.zip"
+short = "snakemake -call diagnostics/recalibration/G0004_cG8605_defaultconf.zip"
+
+[IGNORED_branches]
+opentims = "* master"
+savetimspy = "* main"
+paramidiac = "* main"
+dia_common = "* main"
+ClusterMS = "* main"
+kilograms = "* main"
+midia_search_engines = "* main"
+MSclusterparser = "* main"
+pandas_ops = "* main"
+py4DFF = "* master"
+midia_pipe = "fix/fragpipe_manifest\n* main"
