@@ -42,6 +42,7 @@ seaborn = ""
 default = "snakemake -call diagnostics/recalibration/G8027_cG8605_defaultconf.zip"
 hela = "snakemake -call diagnostics/recalibration/G8602_cG8605_defaultconf.zip"
 short = "snakemake -call diagnostics/recalibration/G0004_cG8605_defaultconf.zip"
+testG8027 = "snakemake -c all fragpipe/raw/rough_fragpipe_truncated_xgboost_tpr0.98/G8027_cG8045_THPRScombined_d4_i4DFF_i4DFF"
 
 [IGNORED_branches]
 opentims = "* master"
