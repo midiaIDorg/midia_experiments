@@ -1,5 +1,5 @@
 [python]
-pyversion='python3.10'
+pyversion='python3.11'
 [git_paths]
 opentims='git+ssh://git@github.com/michalsta/opentims'
 savetimspy='git+ssh://git@github.com/midiaIDorg/savetimspy'
@@ -14,8 +14,8 @@ pandas_ops='git+ssh://git@github.com/midiaIDorg/pandas_ops'
 py4DFF='git+ssh://devel@139.177.177.253:/home/devel/gits/py4DFF'
 midia_pipe='git+ssh://git@github.com/midiaIDorg/midia_pipe'
 [git_versions]
-midia_pipe='recalibration2'
-dia_common='recalib_fixes2'
+midia_pipe='main'
+dia_common='main'
 MSclusterparser='main'
 paramidiac='main'
 savetimspy='main'
