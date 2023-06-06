@@ -13,6 +13,7 @@ pandas_ops='git+ssh://git@github.com/midiaIDorg/pandas_ops'
 # py4DFF='http://192.168.1.151:3000/matteo/py4DFF.git'
 py4DFF='git+ssh://devel@139.177.177.253:/home/devel/gits/py4DFF'
 midia_pipe='git+ssh://git@github.com/midiaIDorg/midia_pipe'
+mmapped_df='git+ssh://git@github.com/michalsta/mmapped_df'
 [git_versions]
 midia_pipe='cnone'
 dia_common='main'
@@ -25,6 +26,7 @@ kilograms='main'
 ClusterMS='main'
 opentims='master'
 midia_search_engines='main'
+mmapped_df='main'
 [requirements_external]
 opentims_bruker_bridge=""
 snakemake=""
