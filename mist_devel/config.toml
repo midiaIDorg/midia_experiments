@@ -15,7 +15,7 @@ py4DFF='git+ssh://devel@139.177.177.253:/home/devel/gits/py4DFF'
 midia_pipe='git+ssh://git@github.com/midiaIDorg/midia_pipe'
 [git_versions]
 midia_pipe='cnone'
-dia_common='reconfig'
+dia_common='main'
 MSclusterparser='main'
 paramidiac='main'
 savetimspy='main'
