@@ -1,0 +1,61 @@
+[python]
+pyversion = "python3.10"
+
+[git_paths]
+opentims = "git+ssh://git@github.com/michalsta/opentims"
+savetimspy = "git+ssh://git@github.com/midiaIDorg/savetimspy"
+paramidiac = "git+ssh://git@github.com/midiaIDorg/paramidiac"
+dia_common = "git+ssh://git@github.com/midiaIDorg/dia_common"
+ClusterMS = "git+ssh://git@github.com/midiaIDorg/ClusterMS"
+kilograms = "git+ssh://git@github.com/midiaIDorg/kilograms"
+midia_search_engines = "git+ssh://git@github.com/midiaIDorg/midia_search_engines"
+MSclusterparser = "git+ssh://git@github.com/midiaIDorg/MSclusterparser"
+pandas_ops = "git+ssh://git@github.com/midiaIDorg/pandas_ops"
+py4DFF = "git+ssh://devel@139.177.177.253:/home/devel/gits/py4DFF"
+midia_pipe = "git+ssh://git@github.com/midiaIDorg/midia_pipe"
+mmapped_df = "git+ssh://git@github.com/michalsta/mmapped_df"
+
+[git_versions]
+midia_pipe = "3796510badab5753d5c8b68cba21970bb18602df"
+dia_common = "1913e2435f9a97595c68d4d5a37fc0ee29a09af7"
+MSclusterparser = "2c20659d1abba59fd6318a19c632a77cc06cae20"
+paramidiac = "46d914b5acc3e073a64c0f9126208d5200bfaa5e"
+savetimspy = "d0b521e1bc034f4ecf0b2e05eeb7786d8a55aef1"
+py4DFF = "ef09601a1ad5cbc48dcceb80327996e7531a7cad"
+pandas_ops = "3bc8526a70ff21dd76d04b59b6c84a84ec53083b"
+kilograms = "ff5f5483674219974e8f2acfae75b5fc34ff6db9"
+ClusterMS = "f9a887d47c7b50583dc2fd7bd88fe80b66186389"
+opentims = "48d06301f6ecb6b4e3cba88f990386e96b2e640c"
+midia_search_engines = "fea9f7fe9d52935c4b30b1baac6257a57485ff16"
+mmapped_df = "59834387df74d8fbc47bd1b50e82e37b60971a68"
+
+[requirements_external]
+opentims_bruker_bridge = ""
+snakemake = ""
+virtualenvwrapper = ""
+gdown = ""
+openpyxl = ""
+ipython = ""
+matplotlib = ""
+plotnine = ""
+seaborn = ""
+
+[run]
+default = "snakemake -call diagnostics/recalibration/G8027_cG8605_defaultconf.zip"
+hela = "snakemake -call diagnostics/recalibration/G8602_cG8605_defaultconf.zip"
+short = "snakemake -call diagnostics/recalibration/G0004_cG8605_defaultconf.zip"
+test5P = "snakemake -call matches/G8027/G8045/bcc7976cc60/4D/0/b5e24bd5ca2/5D/0/0/0/95c2993/p12f15/3/0_qc.png matches/G8027/G8045/bcc7976cc60/4D/0/b5e24bd5ca2/5D/0/0/0/95c2993/p12f15nd/3/0/0/95c2993/p8f8/3/0_qc.png"
+
+[IGNORED_branches]
+opentims = "master"
+savetimspy = "main"
+paramidiac = "main"
+dia_common = "main"
+ClusterMS = "main"
+kilograms = "main"
+midia_search_engines = "main"
+MSclusterparser = "main"
+pandas_ops = "main"
+py4DFF = "master"
+midia_pipe = "debug/sage_5DFF"
+mmapped_df = "main"
