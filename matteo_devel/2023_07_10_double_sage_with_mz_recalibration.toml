@@ -16,7 +16,7 @@ midia_pipe = "git+ssh://git@github.com/midiaIDorg/midia_pipe"
 mmapped_df = "git+ssh://git@github.com/michalsta/mmapped_df"
 
 [git_versions]
-midia_pipe = "8c22eb1c8215f394aa82774bcda5fa401784039c"
+midia_pipe = "89df682135404e889590ee8400ed5c13dfdab641"
 dia_common = "1913e2435f9a97595c68d4d5a37fc0ee29a09af7"
 MSclusterparser = "2c20659d1abba59fd6318a19c632a77cc06cae20"
 paramidiac = "46d914b5acc3e073a64c0f9126208d5200bfaa5e"
@@ -222,8 +222,6 @@ zstd = "==1.5.5.1"
 default = "snakemake -call diagnostics/recalibration/G8027_cG8605_defaultconf.zip"
 hela = "snakemake -call diagnostics/recalibration/G8602_cG8605_defaultconf.zip"
 short = "snakemake -call diagnostics/recalibration/G0004_cG8605_defaultconf.zip"
-test_5P_5DFF_SAGE_mz_recalibration = 'snakemake -call outputs/doubleSageWithCheese/G8027/G8045'
-test_HeLa_5DFF_SAGE_mz_recalibration = 'snakemake -call outputs/doubleSageWithCheese/G8602/G8605'
 
 [IGNORED_branches]
 opentims = "master"
