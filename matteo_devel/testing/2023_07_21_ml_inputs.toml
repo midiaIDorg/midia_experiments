@@ -42,8 +42,8 @@ seaborn=""
 csvkit=""
 
 [run]
-5P = "snakemake -c16 matches/G8027/G8045/bcc7976cc60/4D/0/b5e24bd5ca2/5D/0/0/0/95c2993/p12f15nd/3/0/refined/0/positive_edges_mz{,_not}_recalibrated.pdf"
-HeLa = "snakemake -c16 matches/G8602/G8605/bcc7976cc60/4D/0/b5e24bd5ca2/5D/0/0/0/95c2993/p12f15nd/3/0/refined/0/positive_edges_mz{,_not}_recalibrated.pdf"
+5P = "snakemake -call matches/G8027/G8045/bcc7976cc60/4D/0/b5e24bd5ca2/5D/0/0/0/95c2993/p12f15nd/3/0/refined/0/positive_edges_mz{,_not}_recalibrated.pdf"
+HeLa = "snakemake -call matches/G8602/G8605/bcc7976cc60/4D/0/b5e24bd5ca2/5D/0/0/0/95c2993/p12f15nd/3/0/refined/0/positive_edges_mz{,_not}_recalibrated.pdf"
 
 [IGNORED_branches]
 opentims = "master"
