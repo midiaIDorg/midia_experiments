@@ -1,0 +1,62 @@
+[python]
+pyversion = "python3.10"
+
+[git_paths]
+opentims = "git+ssh://git@github.com/michalsta/opentims"
+savetimspy = "git+ssh://git@github.com/midiaIDorg/savetimspy"
+paramidiac = "git+ssh://git@github.com/midiaIDorg/paramidiac"
+dia_common = "git+ssh://git@github.com/midiaIDorg/dia_common"
+ClusterMS = "git+ssh://git@github.com/midiaIDorg/ClusterMS"
+kilograms = "git+ssh://git@github.com/midiaIDorg/kilograms"
+midia_search_engines = "git+ssh://git@github.com/midiaIDorg/midia_search_engines"
+MSclusterparser = "git+ssh://git@github.com/midiaIDorg/MSclusterparser"
+pandas_ops = "git+ssh://git@github.com/midiaIDorg/pandas_ops"
+py4DFF = "git+ssh://devel@139.177.177.253:/home/devel/gits/py4DFF"
+midia_pipe = "git+ssh://git@github.com/midiaIDorg/midia_pipe"
+mmapped_df = "git+ssh://git@github.com/michalsta/mmapped_df"
+
+[git_versions]
+midia_pipe = ""
+dia_common = ""
+MSclusterparser = ""
+paramidiac = ""
+savetimspy = ""
+py4DFF = ""
+pandas_ops = ""
+kilograms = ""
+ClusterMS = ""
+opentims = ""
+midia_search_engines = ""
+mmapped_df = ""
+
+[requirements_external]
+opentims_bruker_bridge=""
+snakemake=""
+virtualenvwrapper=""
+gdown=""
+openpyxl=""
+ipython=""
+matplotlib=""
+plotnine=""
+seaborn=""
+csvkit=""
+
+[run]
+5P = "snakemake -c16 matches/G8027/G8045/bcc7976cc60/4D/0/b5e24bd5ca2/5D/0/0/0/95c2993/p12f15nd/3/0/refined/0/positive_edges_mz{,_not}_recalibrated"
+HeLa = "snakemake -c16 matches/G8602/G8605/bcc7976cc60/4D/0/b5e24bd5ca2/5D/0/0/0/95c2993/p12f15nd/3/0/refined/0/positive_edges_mz{,_not}_recalibrated"
+
+[IGNORED_branches]
+opentims = "master"
+savetimspy = "main"
+paramidiac = "main"
+dia_common = "main"
+ClusterMS = "main"
+kilograms = "main"
+midia_search_engines = "main"
+MSclusterparser = "main"
+pandas_ops = "main"
+py4DFF = "master"
+midia_pipe = "feature/ML"
+mmapped_df = "main"
+
+[freeze]
