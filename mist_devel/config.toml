@@ -14,9 +14,11 @@ pandas_ops='git+ssh://git@github.com/midiaIDorg/pandas_ops'
 py4DFF='git+ssh://devel@139.177.177.253:/home/devel/gits/py4DFF'
 midia_pipe='git+ssh://git@github.com/midiaIDorg/midia_pipe'
 mmapped_df='git+ssh://git@github.com/michalsta/mmapped_df'
+cached_opentims='git+ssh://git@github.com/michalsta/cached_opentims.git'
 [git_versions]
-midia_pipe='cnone'
-dia_common='main'
+midia_pipe='new_scheme_merge2'
+dia_common='new_scheme_merge2'
+#dia_common='main'
 MSclusterparser='main'
 paramidiac='main'
 savetimspy='main'
@@ -27,6 +29,7 @@ ClusterMS='main'
 opentims='master'
 midia_search_engines='main'
 mmapped_df='main'
+cached_opentims='main'
 [requirements_external]
 opentims_bruker_bridge=""
 snakemake=""
@@ -37,6 +40,7 @@ ipython=""
 matplotlib=""
 plotnine=""
 seaborn=""
+ipykernel=""
 [run]
 default='snakemake -call diagnostics/recalibration/G8027_cG8605_defaultconf.zip'
 hela='snakemake -call diagnostics/recalibration/G8602_cG8605_defaultconf.zip'
@@ -45,3 +49,5 @@ short='snakemake -call diagnostics/recalibration/G0004_cG8605_defaultconf.zip'
 hela_cnone='snakemake -call diagnostics/recalibration/G8602_cNone_defaultconf.zip diagnostics/recalibration/G8602_cNone_thr_low.zip diagnostics/recalibration/G8602_cNone_thr_high.zip diagnostics/recalibration/G8602_cNone_nothr_high.zip diagnostics/recalibration/G8602_cNone_nothr_low.zip --rerun-incomplete --keep-going'
 5p_cself='snakemake -call diagnostics/recalibration/G8027_cSelf_defaultconf.zip diagnostics/recalibration/G8027_cSelf_thr_low.zip diagnostics/recalibration/G8027_cSelf_thr_high.zip diagnostics/recalibration/G8027_cSelf_nothr_high.zip diagnostics/recalibration/G8027_cSelf_nothr_low.zip --rerun-incomplete --keep-going'
 hela_cself='snakemake -call diagnostics/recalibration/G8602_cSelf_defaultconf.zip diagnostics/recalibration/G8602_cSelf_thr_low.zip diagnostics/recalibration/G8602_cSelf_thr_high.zip diagnostics/recalibration/G8602_cSelf_nothr_high.zip diagnostics/recalibration/G8602_cSelf_nothr_low.zip --rerun-incomplete --keep-going'
+3ms1='snakemake -call diagnostics/quad/G8941/all_done'
+hela_sage='snakemake -call outputs/doubleSageWithCheese/G10297/G10303'
