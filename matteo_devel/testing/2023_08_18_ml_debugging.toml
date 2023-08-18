@@ -19,7 +19,7 @@ midia_cpp='git+ssh://git@github.com/michalsta/midia_cpp'
 
 [git_versions]
 mmapped_df='main'
-midia_pipe='main'
+midia_pipe='feature/ML'
 dia_common='41a0fe418164e8203851bea1ad8980d4eb171841'
 MSclusterparser='main'
 paramidiac='main'
