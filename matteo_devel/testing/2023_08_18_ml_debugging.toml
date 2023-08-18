@@ -1,0 +1,56 @@
+[python]
+pyversion='python3.11'
+
+[git_paths]
+mmapped_df='git+ssh://git@github.com/michalsta/mmapped_df'
+opentims='git+ssh://git@github.com/michalsta/opentims'
+savetimspy='git+ssh://git@github.com/midiaIDorg/savetimspy'
+paramidiac='git+ssh://git@github.com/midiaIDorg/paramidiac'
+dia_common='git+ssh://git@github.com/midiaIDorg/dia_common'
+ClusterMS='git+ssh://git@github.com/midiaIDorg/ClusterMS'
+kilograms='git+ssh://git@github.com/midiaIDorg/kilograms'
+midia_search_engines='git+ssh://git@github.com/midiaIDorg/midia_search_engines'
+MSclusterparser='git+ssh://git@github.com/midiaIDorg/MSclusterparser'
+pandas_ops='git+ssh://git@github.com/midiaIDorg/pandas_ops'
+py4DFF='git+ssh://devel@139.177.177.253:/home/devel/gits/py4DFF'
+midia_pipe='git+ssh://git@github.com/midiaIDorg/midia_pipe'
+cached_opentims='git+ssh://git@github.com/michalsta/cached_opentims.git'
+midia_cpp='git+ssh://git@github.com/michalsta/midia_cpp'
+
+[git_versions]
+mmapped_df='main'
+midia_pipe='main'
+dia_common='41a0fe418164e8203851bea1ad8980d4eb171841'
+MSclusterparser='main'
+paramidiac='main'
+savetimspy='main'
+py4DFF='master'
+pandas_ops='main'
+kilograms='main'
+ClusterMS='main'
+opentims='master'
+midia_search_engines='main'
+cached_opentims='main'
+midia_cpp='main'
+
+[requirements_external]
+opentims_bruker_bridge=""
+snakemake=""
+virtualenvwrapper=""
+gdown=""
+openpyxl=""
+ipython=""
+matplotlib=""
+plotnine=""
+seaborn=""
+csvkit=""
+ipykernel=""
+
+[run]
+default='snakemake -call diagnostics/recalibration/G8027_cG8605_defaultconf.zip'
+hela='snakemake -call diagnostics/recalibration/G8602_cG8605_defaultconf.zip'
+short='snakemake -call diagnostics/recalibration/G0004_cG8605_defaultconf.zip'
+thpr5p='snakemake -call fragpipe/raw/rough_fragpipe_fullest_xgboost_tpr0.98/G8027_cNone_THPRScombined_d4_i4DFF_i4DFF'
+test_5P_5DFF_SAGE_mz_recalibration = 'snakemake -call outputs/doubleSageWithCheese/G8027/G8045'
+test_HeLa_5DFF_SAGE_mz_recalibration = 'snakemake -call outputs/doubleSageWithCheese/G8602/G8605'
+test_3ms1='snakemake -n cluster_stats/G8027/G8045/b5e24bd5ca2/5D/0/ms2.parquet'
