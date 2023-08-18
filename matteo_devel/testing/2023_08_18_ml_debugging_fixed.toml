@@ -183,7 +183,7 @@ wrapt = "1.15.0"
 xgboost = "1.7.6"
 xlrd = "2.0.1"
 yte = "1.5.1"
-zstd = "1.5.5.1
+zstd = "1.5.5.1"
 
 [run]
 default='snakemake -call diagnostics/recalibration/G8027_cG8605_defaultconf.zip'
