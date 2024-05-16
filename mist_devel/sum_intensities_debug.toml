@@ -1,6 +1,7 @@
 [git_versions]
 dia_common="intensities_debug_branch_delete_me_if_stale"
 [snakemake_targets]
-default="snakemake -k -call out/base/_old/dataset=G8602/calibration=G8605/compare_raw_precursor_and_fragment_clusters=true/score_rough_edges_config=default out/base/_old/dataset=G8602/calibration=G8605/compare_raw_precursor_and_fragment_clusters=true/score_rough_edges_config=default/hard_filter_rough_matches=true/hard_filter_rough_matches_config=high_correlation"
+#default="snakemake -k -call out/base/_old/dataset=G8602/calibration=G8605/compare_raw_precursor_and_fragment_clusters=true/score_rough_edges_config=default
+default="out/base/_old/dataset=G8602/calibration=G8605/compare_raw_precursor_and_fragment_clusters=true/score_rough_edges_config=default/hard_filter_rough_matches=true/hard_filter_rough_matches_config=high_correlation"
 unfragmented2 = "out/base/default/dataset=G8605/calibration=none"
 
