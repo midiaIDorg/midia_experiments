@@ -1,6 +1,3 @@
 [git_versions]
 midia_pipe='stableish'
 dia_common="stable"
-[snakemake_targets]
-default = "out/base/default/dataset=G8605/calibration=none"
-unfragmented2 = "out/base/default/dataset=G8605/calibration=none"
