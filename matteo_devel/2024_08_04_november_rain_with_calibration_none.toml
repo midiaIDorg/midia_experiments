@@ -34,8 +34,7 @@ kilograms = "707f195cb8efdf0730fb369d24fb5db6bf18c605"
 mgf_ops = "46c9494c043a1895ceaa3d508d41df1ff80d2acd"
 midia_schemes = "f5b08abcf754a33f17b973830c9a5ea450b81034"
 midia_cpp = "737ebdf879d9c73bd4501d852fffbade4037d509"
-midia_pipe = "288ab2644db8d37900597809f91b49a51036583e"
-midia_search_engines = "65f142f7dbbcbe55a98cbe100196619a52de16fb"
+midia_pipe = "cc8aaa1c5a77993bff85c32cabd7aa86b6c399""
 mmapped_df = "ab68eb121751d05b4600d452cdd9dfb04761c728"
 MSclusterparser = "2f06fa76167bc3c6d5859f989c335e0323d9ac7e"
 opentims = "b74a359b0caed74b4480bd0ef5a6a8fbe4911fdb"
@@ -49,6 +48,10 @@ midia_fetcher = "15d395537e3bbe2c490e580443920ff8dcf138c3"
 midia_pipe_hull = "eafc49b6708909a8ebb996fe85dc8c9e30d40707"
 
 [requirements_external]
+virtualenvwrapper = "==6.1.0"
+pyqt5 = ""
+ipympl = "==0.9.4"
+setuptools = "==65.6.3"
 absl-py = "==2.1.0"
 agate = "==1.12.0"
 agate-dbf = "==0.2.3"
@@ -119,7 +122,6 @@ immutables = "==0.20"
 iniconfig = "==2.0.0"
 intervaltree = "==3.1.0"
 ipykernel = "==6.29.5"
-ipympl = "==0.9.4"
 ipython = "==8.26.0"
 ipython-genutils = "==0.2.0"
 ipywidgets = "==8.1.3"
@@ -242,7 +244,6 @@ scipy = "==1.14.0"
 seaborn = "==0.13.2"
 Send2Trash = "==1.8.3"
 setproctitle = "==1.3.3"
-setuptools = "==65.6.3"
 six = "==1.16.0"
 smart-open = "==7.0.4"
 smmap = "==5.0.1"
@@ -285,7 +286,6 @@ uri-template = "==1.3.0"
 urllib3 = "==2.2.2"
 virtualenv = "==20.26.3"
 virtualenv-clone = "==0.5.7"
-virtualenvwrapper = "==6.1.0"
 wcwidth = "==0.2.13"
 webcolors = "==24.6.0"
 webencodings = "==0.5.1"
@@ -324,8 +324,8 @@ small_regression_1 = "out/base/{_old/first_gen_search_engine_config=p12f15_old/s
 small_regression_2 = "out/base/{_old/first_gen_search_engine_config=phospho_old/second_gen_search_engine_config=phospho_old,default/first_gen_search_engine_config=phospho/second_gen_search_engine_config=phospho}/dataset=O12981/calibration=none/first_gen_fasta=Mouse_2024_02_16_UniProt_Taxon10090_Reviewed_17208entries_contaminant_tenzer/second_gen_fasta=Mouse_2024_02_16_UniProt_Taxon10090_Reviewed_17208entries_contaminant_tenzer/edge_refinement_config={_maxRankLeq6,_maxRankLeq12,_ms2_norm_score_geq_q10} out/base/{_old/first_gen_search_engine_config=p12f15_old/second_gen_search_engine_config=p12f15_old,default/first_gen_search_engine_config=p12f15/second_gen_search_engine_config=p12f15}/dataset=B6613/calibration=none/first_gen_fasta=Yeast_2024_02_16_UniProt_Taxon643680_5984entries_contaminant_tenzer/second_gen_fasta=Yeast_2024_02_16_UniProt_Taxon643680_5984entries_contaminant_tenzer/edge_refinement_config={_maxRankLeq6,_maxRankLeq12,_ms2_norm_score_geq_q10}"
 
 [IGNORED_RUN_LOGS]
-defcfg_path = "PosixPath('/home/matteo/MIDIA/midia_tester/midia_tester/configs/default.toml')"
-full_commandline = "/home/matteo/MIDIA/venv_midia_tester/bin/midia_setup.py -o 2024_08_04_novermber_rain -c ../midia_experiments/matteo_devel/2024_08_04_november_rain.toml --shell snakemake -call outputs/all/G8027/G8045"
+defcfg_path = "PosixPath('/home/matteo/Projects/midia/midia_tester/midia_tester/configs/default.toml')"
+full_commandline = "/home/matteo/.local/bin/midia_setup.py -c ../midia_experiments/matteo_devel/2024_08_04_november_rain_clean.toml -o 2024_08_04_november_rain_clean --shell snakemake -call spectra/G80{27,45}.d"
 
 [IGNORED_branches]
 cached_opentims = "midiaID_november_rain_paper"
@@ -352,10 +352,11 @@ midia_pipe_hull = "main"
 [freeze]
 
 [IGNORED_RUN_LOGS.midia_setup_args]
-outdir = "PosixPath('2024_08_04_novermber_rain')"
-config = "PosixPath('../midia_experiments/matteo_devel/2024_08_04_november_rain.toml')"
+outdir = "PosixPath('2024_08_04_november_rain_clean')"
+config = "PosixPath('../midia_experiments/matteo_devel/2024_08_04_november_rain_clean.toml')"
 force = false
 pretend = false
-shell = "snakemake -call outputs/all/G8027/G8045"
+shell = "snakemake -call spectra/G80{27,45}.d"
 skip_self_checks = false
+use_uv = false
 use_venv_instead_virtualenv = false
