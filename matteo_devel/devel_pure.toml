@@ -1,0 +1,51 @@
+[python]
+pyversion = "python3.11"
+
+[config]
+test_param = false
+
+[git_paths]
+cached_opentims = "git+ssh://git@github.com/michalsta/cached_opentims.git"
+ClusterMS = "git+ssh://git@github.com/midiaIDorg/ClusterMS"
+dia_common = "git+ssh://git@github.com/midiaIDorg/dia_common"
+kilograms = "git+ssh://git@github.com/midiaIDorg/kilograms"
+mgf_ops = "git+ssh://git@github.com/midiaIDorg/mgf_ops"
+midia_schemes = "git+ssh://git@github.com/midiaIDorg/midia_schemes"
+midia_cpp = "git+ssh://git@github.com/midiaIDorg/midia_cpp"
+midia_pipe = "git+ssh://git@github.com/midiaIDorg/midia_pipe"
+midia_search_engines = "git+ssh://git@github.com/midiaIDorg/midia_search_engines"
+mmapped_df = "git+ssh://git@github.com/michalsta/mmapped_df"
+MSclusterparser = "git+ssh://git@github.com/midiaIDorg/MSclusterparser"
+opentims = "git+ssh://git@github.com/michalsta/opentims"
+pandas_ops = "git+ssh://git@github.com/midiaIDorg/pandas_ops"
+paramidiac = "git+ssh://git@github.com/midiaIDorg/paramidiac"
+paramidiac2 = "git+ssh://git@github.com/midiaIDorg/paramidiac2"
+recapuccino = "git+ssh://git@github.com/midiaIDorg/recapuccino"
+snakemaketools = "git+ssh://git@github.com/midiaIDorg/snakemaketools"
+midia_fetcher = "git+ssh://git@github.com/midiaIDorg/midia_fetcher"
+midia_pipe_hull = "git+ssh://git@github.com/midiaIDorg/midia_pipe_hull"
+tims_tmp = "git+ssh://git@github.com/midiaIDorg/tims_tmp"
+
+
+[git_versions]
+cached_opentims = "main"
+ClusterMS = "main"
+dia_common = "main"
+kilograms = "main"
+mgf_ops = "main"
+midia_schemes = "main"
+midia_cpp = "main"
+midia_pipe = "devel_longsnake"
+midia_pipe_hull = "main"
+midia_search_engines = "main"
+mmapped_df = "main"
+MSclusterparser = "main"
+opentims = "master"
+pandas_ops = "main"
+paramidiac = "main"
+paramidiac2 = "main"
+recapuccino = "main"
+snakemaketools = "main"
+midia_fetcher = "main"
+tims_tmp = "main"
+
