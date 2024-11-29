@@ -49,7 +49,7 @@ midia_fetcher = "main"
 midia_pipe_hull = "midiaID_november_rain_paper"
 
 [requirements_external]
-ms2rescore = "3.1.3"
+ms2rescore = "==3.1.3"
 im2deep = "==0.2.0"
 deeplcretrainer = "==1.0.0"
 keras = "==3.6.0"
