@@ -68,6 +68,7 @@ tims_tmp = "main"
 # wrapt = "==1.16.0"
 ## MS2RESCORE as usual does not work.
 ipython = ""
+brotli = ""
 csvkit = ""
 ipykernel = ""
 jupyter = ""
