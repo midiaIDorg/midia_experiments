@@ -91,3 +91,8 @@ pandas = ""
 
 [snakemake_targets]
 default = "outputs/base/default/G8027/G8045"
+
+[post_install_script]
+bash="""
+snakemake -call software/sage/{95c2993,v0.14.7}/sage
+"""
