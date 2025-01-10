@@ -94,5 +94,16 @@ default = "outputs/base/default/G8027/G8045"
 
 [post_install_script]
 bash="""
-snakemake -call software/sage/{{95c2993,v0.14.7}}/sage
+echo "Installing The Old Bruker Fork of Sage."
+mkdir -p software/sage/95c2993 
+git clone git@github.com:midiaIDorg/brukersage.git software/sage/95c2993 --branch 95c2993
+rm -rf software/sage/95c2993/.git
+echo "Done\n"
+
+sageVersion=v0.14.7
+echo "Installing $(sageVersion)"
+mkdir -p software/sage/$sageVersion 
+wget -O - https://github.com/lazear/sage/releases/download/$sageVersion/sage-$sageVersion-x86_64-unknown-linux-gnu.tar.gz | tar -xzvf - -C software/sage/$sageVersion
+mv software/sage/$sageVersion/sage-$sageVersion-x86_64*/* software/sage/$sageVersion
+rm -rf software/sage/$sageVersion/sage-*
 """
