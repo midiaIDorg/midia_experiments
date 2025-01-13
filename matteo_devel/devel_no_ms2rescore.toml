@@ -94,6 +94,9 @@ default = "outputs/base/default/G8027/G8045"
 
 [post_install_script]
 bash="""
+mkdir -p spectra/None.d
+touch spectra/None.d/analysis.tdf{,_bin}
+
 echo "Installing The Old Bruker Fork of Sage."
 mkdir -p software/sage/95c2993 
 git clone git@github.com:midiaIDorg/brukersage.git software/sage/95c2993 --branch 95c2993
