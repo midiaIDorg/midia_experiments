@@ -6,13 +6,13 @@ This repo contains pipeline configuration files.
 
 # Normal pipeline
 
-Download [dockerhubregression.zip](./dockerhub_zipfiles/dockerhub.zip).
+Download [dockerhub.zip](./dockerhub_zipfiles/dockerhub.zip).
 Unzip it. 
 Follow instructions in README.md from the unzipped folder.
 
 # Regression tests
 
-Download [dockerhub.zip](./dockerhub_zipfiles/dockerhubregression.zip).
+Download [dockerhubregression.zip](./dockerhub_zipfiles/dockerhubregression.zip).
 Unzip it. 
 Follow instructions in REGRESSION_README.md from the unzipped folder.
 
