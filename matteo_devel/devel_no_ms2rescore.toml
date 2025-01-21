@@ -95,7 +95,8 @@ default = "outputs/base/default/G8027/G8045"
 [post_install_script]
 bash="""
 mkdir -p spectra/None.d
-touch spectra/None.d/analysis.tdf{,_bin}
+touch spectra/None.d/analysis.tdf
+touch spectra/None.d/analysis.tdf_bin
 
 echo "Installing The Old Bruker Fork of Sage."
 mkdir -p software/sage/95c2993 
