@@ -26,7 +26,7 @@ snakemaketools = "git+ssh://git@github.com/midiaIDorg/snakemaketools"
 midia_fetcher = "git+ssh://git@github.com/midiaIDorg/midia_fetcher"
 midia_pipe_hull = "git+ssh://git@github.com/midiaIDorg/midia_pipe_hull"
 tims_tmp = "git+ssh://git@github.com/midiaIDorg/tims_tmp"
-seops="git+ssh://git@github.com:MatteoLacki/seops.git"
+seops="git+ssh://git@github.com/MatteoLacki/seops.git"
 
 [git_versions]
 cached_opentims = "main"
