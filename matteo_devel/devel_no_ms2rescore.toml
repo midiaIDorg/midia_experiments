@@ -1,5 +1,5 @@
 [python]
-pyversion = "python3.11"
+pyversion = "python3.12"
 
 [config]
 test_param = false
@@ -26,7 +26,7 @@ snakemaketools = "git+ssh://git@github.com/midiaIDorg/snakemaketools"
 midia_fetcher = "git+ssh://git@github.com/midiaIDorg/midia_fetcher"
 midia_pipe_hull = "git+ssh://git@github.com/midiaIDorg/midia_pipe_hull"
 tims_tmp = "git+ssh://git@github.com/midiaIDorg/tims_tmp"
-
+seops="git+ssh://git@github.com:MatteoLacki/seops.git"
 
 [git_versions]
 cached_opentims = "main"
@@ -50,6 +50,7 @@ savetimspy = "main"
 snakemaketools = "devel_longsnake"
 midia_fetcher = "main"
 tims_tmp = "main"
+seops = "main"
 
 [requirements_external]
 ## MS2RESCORE
@@ -93,7 +94,7 @@ pandas = ""
 default = "outputs/base/default/G8027/G8045"
 
 [post_install_script]
-bash="""
+bash='''
 mkdir -p spectra/None.d
 touch spectra/None.d/analysis.tdf
 touch spectra/None.d/analysis.tdf_bin
@@ -110,4 +111,4 @@ mkdir -p software/sage/$sageVersion
 wget -O - https://github.com/lazear/sage/releases/download/$sageVersion/sage-$sageVersion-x86_64-unknown-linux-gnu.tar.gz | tar -xzvf - -C software/sage/$sageVersion
 mv software/sage/$sageVersion/sage-$sageVersion-x86_64*/* software/sage/$sageVersion
 rm -rf software/sage/$sageVersion/sage-*
-"""
+'''

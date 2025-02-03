@@ -25,6 +25,7 @@ snakemaketools = "git+ssh://git@github.com/midiaIDorg/snakemaketools"
 midia_fetcher = "git+ssh://git@github.com/midiaIDorg/midia_fetcher"
 midia_pipe_hull = "git+ssh://git@github.com/midiaIDorg/midia_pipe_hull"
 tims_tmp = "git+ssh://git@github.com/midiaIDorg/tims_tmp"
+seops="git+ssh://git@github.com:MatteoLacki/seops.git"
 
 
 [git_versions]
@@ -48,4 +49,28 @@ recapuccino = "main"
 snakemaketools = "main"
 midia_fetcher = "main"
 tims_tmp = "main"
+seops = "main"
 
+
+[snakemake_targets]
+default = "outputs/base/default/G8027/G8045"
+
+[post_install_script]
+bash='''
+mkdir -p spectra/None.d
+touch spectra/None.d/analysis.tdf
+touch spectra/None.d/analysis.tdf_bin
+
+echo "Installing The Old Bruker Fork of Sage."
+mkdir -p software/sage/95c2993 
+git clone git@github.com:midiaIDorg/brukersage.git software/sage/95c2993 --branch 95c2993
+rm -rf software/sage/95c2993/.git
+echo "Done\n"
+
+sageVersion=v0.14.7
+echo "Installing $(sageVersion)"
+mkdir -p software/sage/$sageVersion 
+wget -O - https://github.com/lazear/sage/releases/download/$sageVersion/sage-$sageVersion-x86_64-unknown-linux-gnu.tar.gz | tar -xzvf - -C software/sage/$sageVersion
+mv software/sage/$sageVersion/sage-$sageVersion-x86_64*/* software/sage/$sageVersion
+rm -rf software/sage/$sageVersion/sage-*
+'''
