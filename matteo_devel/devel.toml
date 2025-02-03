@@ -1,5 +1,5 @@
 [python]
-pyversion = "python3.12"
+pyversion = "python3.11"
 
 [config]
 test_param = false
