@@ -25,6 +25,7 @@ savetimspy = "git+ssh://git@github.com/midiaIDorg/savetimspy"
 snakemaketools = "git+ssh://git@github.com/midiaIDorg/snakemaketools"
 midia_fetcher = "git+ssh://git@github.com/midiaIDorg/midia_fetcher"
 midia_pipe_hull = "git+ssh://git@github.com/midiaIDorg/midia_pipe_hull"
+midia_tester = "git+ssh://git@github.com/midiaIDorg/midia_tester"
 tims_tmp = "git+ssh://git@github.com/midiaIDorg/tims_tmp"
 seops="git+ssh://git@github.com/MatteoLacki/seops.git"
 
@@ -49,6 +50,7 @@ recapuccino = "main"
 savetimspy = "main"
 snakemaketools = "devel_longsnake"
 midia_fetcher = "main"
+midia_tester = "main"
 tims_tmp = "main"
 seops = "main"
 
@@ -106,7 +108,7 @@ rm -rf software/sage/95c2993/.git
 echo "Done\n"
 
 sageVersion=v0.14.7
-echo "Installing $(sageVersion)"
+echo "Installing $sageVersion"
 mkdir -p software/sage/$sageVersion 
 wget -O - https://github.com/lazear/sage/releases/download/$sageVersion/sage-$sageVersion-x86_64-unknown-linux-gnu.tar.gz | tar -xzvf - -C software/sage/$sageVersion
 mv software/sage/$sageVersion/sage-$sageVersion-x86_64*/* software/sage/$sageVersion
