@@ -1,0 +1,11 @@
+[python]
+pyversion = "python3.11"
+
+[config]
+test_param = false
+
+[git_paths]
+opentims = "git+ssh://git@github.com/michalsta/opentims"
+
+[git_versions]
+opentims = "master"

@@ -1,0 +1,37 @@
+[python]
+pyversion = "python3.11"
+
+[post_install_script]
+bash='''
+mkdir -p spectra/None.d
+touch spectra/None.d/analysis.tdf
+touch spectra/None.d/analysis.tdf_bin
+
+echo "Installing The Old Bruker Fork of Sage."
+mkdir -p software/sage/95c2993 
+git clone git@github.com:midiaIDorg/brukersage.git software/sage/95c2993 --branch 95c2993
+rm -rf software/sage/95c2993/.git
+echo "Done\n"
+
+sageVersion=v0.14.7
+echo "Installing $sageVersion"
+mkdir -p software/sage/$sageVersion 
+wget -O - https://github.com/lazear/sage/releases/download/$sageVersion/sage-$sageVersion-x86_64-unknown-linux-gnu.tar.gz | tar -xzvf - -C software/sage/$sageVersion
+mv software/sage/$sageVersion/sage-$sageVersion-x86_64*/* software/sage/$sageVersion
+rm -rf software/sage/$sageVersion/sage-*
+
+
+sageVersion=devel
+echo "Installing $sageVersion"
+mkdir -p software/sage/$sageVersion 
+git clone git@github.com:lazear/sage.git software/sage/devel/git
+cd software/sage/devel/git
+git checkout 5e0a069a280906c08ad26cae003b393bb4d9bf02
+cargo build -j 16 --release --manifest-path Cargo.toml
+cd ../../../..
+cp --reflink=auto software/sage/devel/git/target/release/sage software/sage/devel/sage
+cp --reflink=auto software/sage/devel/git/LICENSE software/sage/devel/sage/LICENSE
+cp --reflink=auto software/sage/devel/git/README.md software/sage/devel/sage/README.md
+
+rm -rf software/sage/devel/git
+'''
