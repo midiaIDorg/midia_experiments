@@ -1,0 +1,33 @@
+[python]
+pyversion = "python3.11"
+
+[config]
+test_param = false
+
+[git_paths]
+midia_pipe = "git+ssh://git@github.com/midiaIDorg/midia_pipe"
+cached_opentims = "git+ssh://git@github.com/michalsta/cached_opentims.git"
+
+[git_versions]
+cached_opentims = "main"
+midia_pipe = "devel_longsnake"
+
+[requirements_external]
+
+
+[post_install_script]
+bash='''
+sageVersion=devel
+echo "Installing $sageVersion"
+mkdir -p software/sage/$sageVersion 
+git clone git@github.com:lazear/sage.git software/sage/devel/git
+cd software/sage/devel/git
+git checkout 5e0a069a280906c08ad26cae003b393bb4d9bf02
+cargo build -j 16 --release --manifest-path Cargo.toml
+cd ../../../..
+cp --reflink=auto software/sage/devel/git/target/release/sage software/sage/devel/sage
+cp --reflink=auto software/sage/devel/git/LICENSE software/sage/devel/sage/LICENSE
+cp --reflink=auto software/sage/devel/git/README.md software/sage/devel/sage/README.md
+
+rm -rf software/sage/devel/git
+'''
