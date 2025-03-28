@@ -1,0 +1,116 @@
+use_gpu = true # OPTIONAL: this will instruct the docker image build process to use CUDA image as base.
+
+[python]
+pyversion = "python3.11"
+
+[config]
+test_param = false
+
+[git_paths]
+cached_opentims = "git+ssh://git@github.com/michalsta/cached_opentims.git"
+ClusterMS = "git+ssh://git@github.com/midiaIDorg/ClusterMS"
+dia_common = "git+ssh://git@github.com/midiaIDorg/dia_common"
+kilograms = "git+ssh://git@github.com/midiaIDorg/kilograms"
+mgf_ops = "git+ssh://git@github.com/midiaIDorg/mgf_ops"
+midia_schemes = "git+ssh://git@github.com/midiaIDorg/midia_schemes"
+midia_cpp = "git+ssh://git@github.com/midiaIDorg/midia_cpp"
+midia_pipe = "git+ssh://git@github.com/midiaIDorg/midia_pipe"
+midia_search_engines = "git+ssh://git@github.com/midiaIDorg/midia_search_engines"
+mmapped_df = "git+ssh://git@github.com/michalsta/mmapped_df"
+MSclusterparser = "git+ssh://git@github.com/midiaIDorg/MSclusterparser"
+opentims = "git+ssh://git@github.com/michalsta/opentims"
+pandas_ops = "git+ssh://git@github.com/midiaIDorg/pandas_ops"
+paramidiac = "git+ssh://git@github.com/midiaIDorg/paramidiac"
+paramidiac2 = "git+ssh://git@github.com/midiaIDorg/paramidiac2"
+recapuccino = "git+ssh://git@github.com/midiaIDorg/recapuccino"
+savetimspy = "git+ssh://git@github.com/midiaIDorg/savetimspy"
+snakemaketools = "git+ssh://git@github.com/midiaIDorg/snakemaketools"
+midia_fetcher = "git+ssh://git@github.com/midiaIDorg/midia_fetcher"
+midia_pipe_hull = "git+ssh://git@github.com/midiaIDorg/midia_pipe_hull"
+midia_tester = "git+ssh://git@github.com/midiaIDorg/midia_tester"
+tims_tmp = "git+ssh://git@github.com/midiaIDorg/tims_tmp"
+seops="git+ssh://git@github.com/MatteoLacki/seops.git"
+
+
+[git_versions]
+cached_opentims = "main"
+ClusterMS = "main"
+dia_common = "main"
+kilograms = "main"
+mgf_ops = "main"
+midia_schemes = "main"
+midia_cpp = "main"
+midia_pipe = "devel_longsnake"
+midia_pipe_hull = "main"
+midia_search_engines = "main"
+mmapped_df = "main"
+MSclusterparser = "main"
+opentims = "master"
+pandas_ops = "main"
+paramidiac = "main"
+paramidiac2 = "main"
+recapuccino = "main"
+savetimspy = "main"
+snakemaketools = "devel_longsnake"
+midia_fetcher = "main"
+midia_tester = "main"
+tims_tmp = "main"
+seops = "main"
+
+[requirements_external]
+ms2rescore = ""
+im2deep = ""
+deeplcretrainer = ""
+keras = ""
+ms2rescore-rs = ""
+protobuf = ""
+psm = ""
+pyarrow = ""
+pydantic = ""
+pydantic_core = ""
+rfc3986 = ""
+wrapt = ""
+brotli = ""
+ipython = ""
+csvkit = ""
+ipykernel = ""
+jupyter = ""
+jupyterlab = ""
+matplotlib = ""
+openpyxl = ""
+opentims_bruker_bridge = ""
+plotly = ""
+plotnine = ""
+pony = ""
+pymysql = ""
+pytest = ""
+seaborn = ""
+snakemake = ""
+pyqt5 = ""
+ipympl = ""
+UpSetPlot = ""
+duckdb = ""
+pandas = ""
+
+[snakemake_targets]
+default = "outputs/base/default/G8027/G8045"
+
+[post_install_script]
+bash='''
+mkdir -p spectra/None.d
+touch spectra/None.d/analysis.tdf
+touch spectra/None.d/analysis.tdf_bin
+
+echo "Installing The Old Bruker Fork of Sage."
+mkdir -p software/sage/95c2993 
+git clone git@github.com:midiaIDorg/brukersage.git software/sage/95c2993 --branch 95c2993
+rm -rf software/sage/95c2993/.git
+echo "Done\n"
+
+sageVersion=v0.14.7
+echo "Installing $sageVersion"
+mkdir -p software/sage/$sageVersion 
+wget -O - https://github.com/lazear/sage/releases/download/$sageVersion/sage-$sageVersion-x86_64-unknown-linux-gnu.tar.gz | tar -xzvf - -C software/sage/$sageVersion
+mv software/sage/$sageVersion/sage-$sageVersion-x86_64*/* software/sage/$sageVersion
+rm -rf software/sage/$sageVersion/sage-*
+'''
