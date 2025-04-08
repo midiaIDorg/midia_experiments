@@ -30,7 +30,7 @@ midia_pipe_hull = "git+ssh://git@github.com/midiaIDorg/midia_pipe_hull"
 midia_tester = "git+ssh://git@github.com/midiaIDorg/midia_tester"
 tims_tmp = "git+ssh://git@github.com/midiaIDorg/tims_tmp"
 seops="git+ssh://git@github.com/MatteoLacki/seops.git"
-
+sagepy_midiaid_adapter = "git+ssh://git@github.com/midiaIDorg/sagepy_midiaid_adapter.git"
 
 [git_versions]
 cached_opentims = "main"
@@ -56,8 +56,10 @@ midia_fetcher = "main"
 midia_tester = "main"
 tims_tmp = "main"
 seops = "main"
+sagepy_midiaid_adapter = "main"
 
 [requirements_external]
+imspy = ""
 ms2rescore = ""
 im2deep = ""
 deeplcretrainer = ""

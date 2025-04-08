@@ -57,6 +57,7 @@ seops = "main"
 sagepy_midiaid_adapter = "main"
 
 [requirements_external]
+imspy = ""
 sagepy = ""
 ms2rescore = ""
 im2deep = ""
